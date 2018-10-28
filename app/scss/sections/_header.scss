@@ -70,10 +70,11 @@ header {
 
     &__wrap {
         max-width: 450px;
+        margin-top: auto;
     }
     &__cont {
         background: url(../img/header-bg.png);
-        padding: 40px 147px;
+        padding: 40px 147px 66px;
         background-size: cover;
         position: relative;
         width: 68%;
@@ -87,7 +88,7 @@ header {
             height: 85%;
             height: calc(100% - 100px);
             position: absolute;
-            top: 50px;
+            top: 40px;
             left: 50px;
             background-color: $light-peach;
             z-index: -1;
@@ -131,7 +132,13 @@ header {
             padding: 9px 11px;
         }
     }
-
+    &__bottom {
+        margin-top: auto;
+        display: flex;
+        div:first-child {
+            margin-right: 59px;
+        }
+    }
 }
 
 
@@ -151,8 +158,7 @@ header {
 .container-tabs {
     position: relative;
     width: 32%;
-    margin-top: auto;
-    margin-bottom: auto
+    display: flex;
 }
 .header__tabs {
     position: absolute;
@@ -186,9 +192,17 @@ header {
     max-width: 422px;
     position: relative;
     left: -230px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 .img-wrap {
     img {
         width: 100%;
     }
+}
+.scroll {
+    position: absolute;
+    bottom: 66px;
+    right: 100px;
+    cursor: pointer;
 }

@@ -16,6 +16,9 @@
     .tabs__item.active a:after {
         width: 100%;
     }
+    .scroll {
+        right: 20px;
+    }
 }
 @media only screen and (max-width: 1240px) {
     .wrap {
@@ -131,6 +134,12 @@
     }
     .header__select {
         margin-bottom: 0;
+    }
+    .header__bottom {
+        display: none;
+    }
+    .scroll {
+        display: none;
     }
     .btn {
         margin-top: 50px;
