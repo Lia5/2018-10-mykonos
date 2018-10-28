@@ -1,6 +1,18 @@
 
 document.addEventListener('DOMContentLoaded', function(){
+//menu
+    var menu = document.querySelector('.toggle-menu');
+    menu.addEventListener('click', function(){
+        var nav = document.querySelector('.main-menu');
+        nav.classList.toggle('active');
 
+    });
+    var cross = document.querySelector('.cross');
+    cross.addEventListener('click', function(){
+        var nav = document.querySelector('.main-menu');
+        nav.classList.toggle('active');
+
+    });
 //tabs
 	// store tabs variable
 	var myTabs = document.querySelectorAll("ul.header__tabs > li");
