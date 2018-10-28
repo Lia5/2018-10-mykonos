@@ -73,8 +73,10 @@ gulp.task('jade', function() {
 
 gulp.task('watch', ['styles', 'js', 'jade', 'browser-sync'], function() {
 	gulp.watch('app/'+syntax+'/**/*.'+syntax+'', ['styles']);
+	gulp.watch('app/'+syntax+'/**/*.+(scss|sass)', ['styles']);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
 	gulp.watch('app/jade/**/*.jade', ['jade']);
+
 	gulp.watch('app/*.html', browserSync.reload)
 });
 
