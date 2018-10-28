@@ -1,0 +1,100 @@
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 150px;
+    position: relative;
+    &__block {
+        width: 50%;
+    }
+    &__foto {
+        max-width: 524px;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 100px;
+            left: 50px;
+            width: 100%;
+            height: 100%;
+            background: url(../img/info2.png) no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
+    }
+    &__text {
+        padding-left: 150px;
+    }
+    &__foto--same {
+        &:before {
+            background: url(../img/info3.png) no-repeat;
+            filter: grayscale(100%); 
+            opacity: 0.3;
+            top: -100px;
+            left: -50px;
+
+        }
+    }
+    &__list {
+        li {
+            padding-left: 17px;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                width: 11px;
+                height: 1px;
+                background-color: #0b0b0b;
+                left: 0;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+        }
+    }
+    &:before, &:after {
+        content: "";
+        position: absolute;
+        height: 325px;
+        width: 2px;
+        background: #000;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, 0) 
+    }
+    &:before {
+        top: 70px;
+        bottom: auto;
+    }
+    &:after {
+        top: auto;
+        bottom: 70px;
+    }
+}
+.text90 {
+    width: 100%;
+    height: 100%;
+    font-size: 33px;
+    font-family: $title-font;
+    letter-spacing: 20px;
+    
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+    position: relative;
+    span {
+        display: block;
+        transform: rotate(-90deg);
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 860px;
+        // background-color: $light-peach;
+        top: 0;
+        left: 0;
+        transform: rotate(90deg);
+
+    }
+}
