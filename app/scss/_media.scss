@@ -4,7 +4,17 @@
     .wrap {
         max-width: 1680px;
         margin: 0 auto;
-        padding: 47px 40px;
+        padding: 47px 0;
+    }
+    //header
+    .tab-content {
+        left: -48%;
+    }
+    .tabs__item a {
+        margin-right: 20px;
+    }
+    .tabs__item.active a:after {
+        width: 100%;
     }
 }
 @media only screen and (max-width: 1240px) {
@@ -18,6 +28,17 @@
     }
     .main-menu a {
         padding: 20px;
+    }
+    //header
+    .header__panel {
+        flex-wrap: wrap;
+    }
+    .header__select {
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+    .text {
+        padding: 0 20px 0 0;
     }
 }
 @media only screen and (max-width: 980px) {
@@ -33,11 +54,78 @@
         padding: 20px 10px;
     }
     .logo {
-        padding: 11px 65px;
+        padding: 11px 40px;
+    }
+    //header
+    .header {
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .container-tabs {
+        overflow: hidden;
+        position: relative;
+
+        width: 100%;
+        order: -1;
+        
+        &:before {
+            content: "";
+            z-index: -1;
+            background: url(../img/header-img-001.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: grayscale(100%); 
+            position: absolute;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            transform: scale(-1, 1);
+        }
+        &:after {
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            content: "";
+            width: 50%;
+            height: 100%;
+            background-color: rgba(248,182,116,.5);
+        }
+    }
+    .tab-content {
+        max-width: 70%;
+        margin: 80px auto;
+        left: 0;
+    }
+    .header__cont {
+        width: 100%;
+        background: none;
+        padding: 100px 20px;
+        &:after {
+            content: none;
+            background: none;
+        }
+    }
+    .header__wrap {
+        max-width: none;
+        text-align: center;
+    }
+    .header__panel {
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 25px;
+    }
+    .header__select {
+        margin-bottom: 0;
+    }
+    .btn {
+        margin-top: 50px;
     }
 
 }
 @media only screen and (max-width: 720px) {
+    body {
+        font-size: 9px;
+    }
     .wrap {
         max-width: 720px;
         margin: 0 auto;
@@ -96,12 +184,38 @@
     .cart {
         margin-left: 0;
     }
+    //header
+    .header__select {
+        min-width: 160px;
+    }
+    .tabs__item a {
+        font-size: 0;
+        padding: 11px 17px;
+    }
+    .tabs__item a:after {
+        width: 19px;
+        background-color: #000;
+    }
+    .subtitle {
+        font-size: 10px;
+        letter-spacing: 10px;
+    }
+    .title {
+        font-size: 25px;
+        letter-spacing: 8px;
+    }
+    .header__panel {
+        font-size: 9px;
+        text-align: left;
+    }
+
 }
 @media only screen and (max-width: 413px) {
     .wrap {
         max-width: 414px;
         margin: 0 auto;
     }
+    
 }
 @media only screen and (max-width: 320px) {
 
