@@ -32,14 +32,19 @@ header.wrap
 				.header__ Pick a color
 				.header__number 
 			.btn Add to cart
+		.container-tabs
 
-		ul.header__tabs
-			li.tabs__item
-				span.line
-				span.primary-text img 001
-			li.tabs__item
-				span.line
-				span.primary-text img 002
-			li.tabs__item
-				span.line
-				span.primary-text img 003
+
+			.tab-content
+				.tab-pane.active#tab-1 
+					.img-wrap
+						img(src="img/header-img-001.png", alt="bikini")
+				.tab-pane#tab-2 text2
+				.tab-pane#tab-3 text3
+			ul.header__tabs
+				li.tabs__item.active
+					a.primary-text(href="#tab-1") img 001
+				li.tabs__item
+					a.primary-text(href="#tab-2") img 002
+				li.tabs__item
+					a.primary-text(href="#tab-3") img 003
