@@ -59,7 +59,12 @@
     .maddle-block:after {
         height: 284px;
     }
-
+    //footer
+    .social {
+        &__item {
+            padding: 20px;
+        }
+    }
 
 
 }
@@ -204,7 +209,16 @@
     .maddle-block {
         margin-bottom: 80px;
     }
-
+    //footer
+    .social {
+        display: none;
+    }
+    .footer__left {
+        max-width: 256px;
+    }
+    .footer__menu a {
+        padding: 12px;
+    }
 
 }
 @media only screen and (max-width: 720px) {
@@ -309,13 +323,28 @@
     .maddle-block {
         margin-bottom: 56px;
     }
-    
+    //footer
+    .footer .wrap {
+        flex-wrap: wrap;
+    }
+    .footer__menu {
+        order: -1;
+        width: 100%;
+    }
+    .footer__left {
+        max-width: none;
+        width: 100%;
+        text-align: center;
+    }
 
 }
 @media only screen and (max-width: 500px) {
     .info__foto {
         max-width: 232px;
         margin-bottom: 48px;
+    }
+    .footer__logo {
+        display: none;
     }
 }
 

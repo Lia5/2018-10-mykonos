@@ -37,5 +37,34 @@ document.addEventListener('DOMContentLoaded', function(){
 	}
 	for (i = 0; i < myTabs.length; i++) {
 		myTabs[i].addEventListener("click", myTabClicks)
-	}
+    }
+//slider
+var slider = tns({
+   // "autoWidth": true,
+    "items": 3,
+    "gutter": 10,
+    "mouseDrag": true,
+  //  "swipeAngle": false,
+  //  "container": "#autoWidth",
+    "speed": 400,
+    container: '.my-slider',
+    items: 1,
+    responsive: {
+      640: {
+        edgePadding: 20,
+        gutter: 20,
+        items: 2
+      },
+      700: {
+        gutter: 30
+      },
+      900: {
+        items: 3
+      }
+    }
+  });
+
+
+
+
 });
