@@ -1,3 +1,13 @@
 .title--items {
     font-size: 50px;
+    text-align: center;
+}
+.my-slider-item {
+    width: 425px;
+    img {
+        width: 100%;
+    }
+}
+.my-slider-item.tns-slide-active:nth-child(2n) {
+    filter: grayscale(100%); 
 }

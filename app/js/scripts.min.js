@@ -44,6 +44,8 @@ var slider = tns({
     "items": 3,
     "gutter": 10,
     "mouseDrag": true,
+    "navAsThumbnails": true,
+//    "slideBy":2,
   //  "swipeAngle": false,
   //  "container": "#autoWidth",
     "speed": 400,
