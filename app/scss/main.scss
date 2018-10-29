@@ -116,6 +116,8 @@ ul,li {
 	margin-top: 25px;
 	transition: 0.5s;
 	cursor: pointer;
+	background: transparent;
+	border: none;
 	&:before {
 		content: "";
 		position: absolute;

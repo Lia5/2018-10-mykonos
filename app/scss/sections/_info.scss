@@ -74,7 +74,7 @@
 .text90 {
     width: 100%;
     height: 100%;
-    font-size: 33px;
+    font-size: 55px;
     font-family: $title-font;
     letter-spacing: 20px;
     
@@ -86,15 +86,23 @@
         display: block;
         transform: rotate(-90deg);
     }
+    
+}
+.maddle-block{
+    position: relative;
+    width: 100%;
+    text-align: center;
     &:after {
         content: "";
         position: absolute;
-        width: 400px;
-        height: 860px;
-        // background-color: $light-peach;
-        top: 0;
-        left: 0;
-        transform: rotate(90deg);
+        width: 860px;
+        height: 400px;
+        background-color: $light-peach;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
 
     }
 }
