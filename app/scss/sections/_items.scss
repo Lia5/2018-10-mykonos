@@ -5,6 +5,7 @@
 .my-slider-item {
     width: 425px;
     transition: 0.5s;
+    outline: none;
     img {
         transition: 0.5s;
         width: 100%;
@@ -16,9 +17,55 @@
     img {
        transform: scale(0.7); 
     }
-    
-
 }
-.my-slider-item{
-
+.my-slider-item.tns-slide-active.center {
+    position: relative;
+    &:before, &:after {
+         content: "";
+        position: absolute;
+        width: 115px;
+        height: 2px;
+        background-color: #000;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+    &:before {
+        left: -55%;
+    }
+    &:after {
+        right: -21%;
+        z-index: 1;
+    }
+}
+.tns-outer {
+    position: relative;
+}
+.tns-controls{
+    width: 100%;
+    height: 0;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 2;
+    outline: none;
+    button {
+        background-color: transparent;
+        border: none;
+        transform: rotate(-90deg);
+        outline: none;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        font-size: 10px;
+        height: 20px;
+        
+        &:hover {
+            color: #fdac5c;
+        }
+    }
+   
+}
+.tns-controls button[data-controls=prev]{
+    background-color: transparent;
 }

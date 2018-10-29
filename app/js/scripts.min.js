@@ -43,8 +43,11 @@ var slider = tns({
     // "items": 3.2,
     "edgePadding": 170,
     "mouseDrag": true,
-    // "navAsThumbnails": true,
-    // "arrowKeys": true,
+    "navAsThumbnails": false,
+    "arrowKeys": false,
+    "nav": false,
+    "prevButton": true,
+    "controlsText": ["prev item", "next item"],
 //    "slideBy":2,
   //  "swipeAngle": false,
   //  "container": "#autoWidth",
@@ -61,8 +64,8 @@ var slider = tns({
         edgePadding: 170
       },
       900: {
-        items: 3,
-        navAsThumbnails: true
+        items: 3
+        // navAsThumbnails: true
       }
     }
   });
