@@ -6,13 +6,17 @@
     width: 425px;
     transition: 0.5s;
     img {
+        transition: 0.5s;
         width: 100%;
 
     }
 }
 .my-slider-item.tns-slide-active:not(.center) {
     filter: grayscale(100%); 
-    transform: scale(0.7);
+    img {
+       transform: scale(0.7); 
+    }
+    
 
 }
 .my-slider-item{
