@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function(){
 var slider = tns({
    // "autoWidth": true,
     // "items": 3.2,
-    "edgePadding": 170,
+    // "edgePadding": 170,
     "mouseDrag": true,
     "navAsThumbnails": false,
     "arrowKeys": false,
@@ -55,13 +55,12 @@ var slider = tns({
     items: 1,
     responsive: {
       640: {
-        edgePadding: 20,
+
         gutter: 20,
         items: 2
       },
       700: {
-        gutter: 170,
-        edgePadding: 170
+        gutter: 90
       },
       900: {
         items: 3

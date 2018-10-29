@@ -19,6 +19,7 @@
     .scroll {
         right: 20px;
     }
+
 }
 @media only screen and (max-width: 1240px) {
     .wrap {
@@ -65,7 +66,13 @@
             padding: 20px;
         }
     }
-
+    //slider
+    .tns-controls button[data-controls=prev]{
+        left: 0;
+    }
+    .tns-controls button[data-controls=next]{
+        right: 0;
+    }
 
 }
 @media only screen and (max-width: 980px) {

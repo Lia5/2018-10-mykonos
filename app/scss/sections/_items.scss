@@ -1,6 +1,13 @@
 .title--items {
     font-size: 50px;
     text-align: center;
+    margin-bottom: 80px;
+}
+.slider__wrap {
+    max-width: 1377px;
+    margin: 0 auto;
+    position: relative;
+
 }
 .my-slider-item {
     width: 425px;
@@ -12,29 +19,48 @@
 
     }
 }
+.my-slider__text {
+    text-align: center;
+    display: none;
+}
+.my-slider__title {
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: #000;
+    font-family: $second-font;
+}
+.my-slider__desc {
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #000;
+}
 .my-slider-item.tns-slide-active:not(.center) {
     filter: grayscale(100%); 
     img {
-       transform: scale(0.7); 
+       transform: scale(0.58); 
     }
 }
 .my-slider-item.tns-slide-active.center {
     position: relative;
-    &:before, &:after {
-         content: "";
-        position: absolute;
-        width: 115px;
-        height: 2px;
-        background-color: #000;
-        top: 50%;
-        transform: translate(0, -50%);
-    }
+    z-index: 2;
+
     &:before {
-        left: -55%;
+        content: "";
+        position: absolute;
+        width: 979px;
+        height: 95%;
+        background-color: $light-peach;
+        top: 50%;
+        left: 40%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+
     }
-    &:after {
-        right: -21%;
-        z-index: 1;
+    .my-slider__text {
+        display: block;
     }
 }
 .tns-outer {
@@ -51,6 +77,7 @@
     z-index: 2;
     outline: none;
     button {
+        position: absolute;
         background-color: transparent;
         border: none;
         transform: rotate(-90deg);
@@ -64,8 +91,27 @@
             color: #fdac5c;
         }
     }
+    &:before, &:after {
+        content: "";
+       position: absolute;
+       width: 115px;
+       height: 2px;
+       background-color: #000;
+       top: 50%;
+       transform: translate(0, -50%);
+   }
+   &:before {
+       left: 20%;
+   }
+   &:after {
+       right: 20%;
+       z-index: 1;
+   }
    
 }
 .tns-controls button[data-controls=prev]{
-    background-color: transparent;
+    left: -124px;
+}
+.tns-controls button[data-controls=next]{
+    right: -124px;
 }
