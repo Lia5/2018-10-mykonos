@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function(){
 var slider = tns({
    // "autoWidth": true,
     // "items": 3.2,
-    // "gutter": 10,
+    "edgePadding": 170,
     "mouseDrag": true,
     // "navAsThumbnails": true,
     // "arrowKeys": true,
@@ -57,7 +57,8 @@ var slider = tns({
         items: 2
       },
       700: {
-        gutter: 30
+        gutter: 170,
+        edgePadding: 170
       },
       900: {
         items: 3,
@@ -69,6 +70,7 @@ var slider = tns({
   var centers = document.querySelectorAll('.tns-slide-active');
   for (var i = 0; i < centers.length; i++) {
       console.log(centers[i]);
+      centers[i].classList.remove('center');
       if (centers[i].previousElementSibling.classList.contains('tns-slide-active') && centers[i].nextElementSibling.classList.contains('tns-slide-active')  ) {
           centers[i].classList.add('center');
       } else {

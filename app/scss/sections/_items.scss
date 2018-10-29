@@ -4,10 +4,17 @@
 }
 .my-slider-item {
     width: 425px;
+    transition: 0.5s;
     img {
         width: 100%;
+
     }
 }
-.my-slider-item.tns-slide-active.center {
+.my-slider-item.tns-slide-active:not(.center) {
     filter: grayscale(100%); 
+    transform: scale(0.7);
+
+}
+.my-slider-item{
+
 }
