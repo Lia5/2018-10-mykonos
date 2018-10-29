@@ -8,6 +8,6 @@
         width: 100%;
     }
 }
-.my-slider-item.tns-slide-active:nth-child(2n) {
+.my-slider-item.tns-slide-active.center {
     filter: grayscale(100%); 
 }

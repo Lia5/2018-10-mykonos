@@ -35,20 +35,19 @@ document.addEventListener('DOMContentLoaded', function(){
         console.log(activePaneId);
 		activePane.classList.add("active");
 	}
-	for (i = 0; i < myTabs.length; i++) {
-		myTabs[i].addEventListener("click", myTabClicks)
-    }
+
+
 //slider
 var slider = tns({
    // "autoWidth": true,
-    "items": 3,
-    "gutter": 10,
+    // "items": 3.2,
+    // "gutter": 10,
     "mouseDrag": true,
-    "navAsThumbnails": true,
+    // "navAsThumbnails": true,
+    // "arrowKeys": true,
 //    "slideBy":2,
   //  "swipeAngle": false,
   //  "container": "#autoWidth",
-    "speed": 400,
     container: '.my-slider',
     items: 1,
     responsive: {
@@ -61,12 +60,33 @@ var slider = tns({
         gutter: 30
       },
       900: {
-        items: 3
+        items: 3,
+        navAsThumbnails: true
       }
     }
   });
-
-
+  
+  var centers = document.querySelectorAll('.tns-slide-active');
+  for (var i = 0; i < centers.length; i++) {
+      console.log(centers[i]);
+      if (centers[i].previousElementSibling.classList.contains('tns-slide-active') && centers[i].nextElementSibling.classList.contains('tns-slide-active')  ) {
+          centers[i].classList.add('center');
+      } else {
+          centers[i].classList.remove('center');
+      }
+  }
+  var customizedFunction = function () {
+    var centers = document.querySelectorAll('.tns-slide-active');
+    for (var i = 0; i < centers.length; i++) {
+        console.log(centers[i]);
+        if (centers[i].previousElementSibling.classList.contains('tns-slide-active') && centers[i].nextElementSibling.classList.contains('tns-slide-active')  ) {
+            centers[i].classList.add('center');
+        } else {
+            centers[i].classList.remove('center');
+        }
+    }
+  }
+  slider.events.on('transitionEnd', customizedFunction);
 
 
 });
