@@ -148,6 +148,7 @@ header {
 //tabs
 .tab-pane {
     display: none;
+    width: 100%;
     &.active {
         display: block;
     }
@@ -189,11 +190,15 @@ header {
     }
 }
 .tab-content {
+    width: 100%;
     max-width: 422px;
     position: relative;
     left: -230px;
     margin-top: auto;
     margin-bottom: auto;
+    .img-wrap {
+        width: 100%;
+    }
 }
 .img-wrap {
     img {

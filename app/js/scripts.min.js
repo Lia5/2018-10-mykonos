@@ -34,6 +34,9 @@ document.addEventListener('DOMContentLoaded', function(){
         var activePane = document.querySelector(activePaneId);
         console.log(activePaneId);
 		activePane.classList.add("active");
+    }
+    for (i = 0; i < myTabs.length; i++) {
+		myTabs[i].addEventListener("click", myTabClicks)
 	}
 
 
