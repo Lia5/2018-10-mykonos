@@ -126,6 +126,12 @@
     }
 }
 @media only screen and (max-width: 980px) {
+    .desctop {
+        display: none;
+    }
+    .mob {
+        display: block;
+    }
     .wrap {
         max-width: 980px;
         margin: 0 auto;
@@ -246,7 +252,7 @@
             display: inline-block;
         }
         &:after {
-            content: none;
+            // content: none;
         }
         &:before {
             height: 125px;
@@ -267,6 +273,12 @@
         margin-bottom: 80px;
     }
     //footer
+    .footer {
+        padding-top: 0;
+        .wrap {
+            padding: 0;
+        }
+    }
     .social {
         display: none;
     }
@@ -276,7 +288,25 @@
     .footer__menu a {
         padding: 12px;
     }
-
+    //slider
+    .items {
+        .wrap {
+            padding: 0;
+        }
+    }
+    .slider__wrap:before {
+        height: 100%;
+        top: 43%;
+    }
+    .my-slider {
+        min-height: 700px;
+    }
+    .tns-controls:after, .tns-controls:before {
+        content: none;
+    }
+    .tns-controls {
+        top: 40%;
+    }
 }
 @media only screen and (max-width: 720px) {
     body {
@@ -365,11 +395,16 @@
         text-align: left;
     }
     /*info*/
+    
     .info {
         padding-top: 0;
     }
     .info__foto:before {
         content: none;
+    }
+    .info:after {
+        height: 125px;
+        bottom: 7px;
     }
     .text90 {
         max-width: 500px;
@@ -393,6 +428,26 @@
         width: 100%;
         text-align: center;
     }
+    //slider
+    .my-slider-item.tns-slide-active:not(.center) img {
+        height: 460px;
+    }
+    .tns-controls {
+        top: 31%;
+    }
+    .tns-controls button[data-controls=prev] {
+        left: -6%;
+    }
+    .tns-controls button[data-controls=next] {
+        right: -6%;
+    }
+    .items .title {
+        font-size: 35px;
+    }
+    .slider__wrap:before {
+        height: 90%;
+        top: 40%;
+    }
 
 }
 @media only screen and (max-width: 500px) {
@@ -410,7 +465,16 @@
         max-width: 414px;
         margin: 0 auto;
     }
-    
+    .my-slider-item.tns-slide-active:not(.center) img {
+        height: 312px;
+    }
+    .my-slider {
+        min-height: 480px;
+    }
+    .slider__wrap:before {
+        height: 100%;
+        top: 43%;
+    }
 }
 @media only screen and (max-width: 320px) {
 

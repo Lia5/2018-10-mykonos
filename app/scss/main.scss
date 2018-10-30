@@ -155,7 +155,9 @@ ul,li {
 		}
 	}
 }
-
+.mob {
+	display: none;
+}
 @import "sections/header"; 
 @import "sections/info"; 
 @import "sections/items"; 
