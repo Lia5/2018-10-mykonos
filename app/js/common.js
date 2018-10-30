@@ -48,9 +48,6 @@ var slider = tns({
     "nav": false,
     "prevButton": true,
     "controlsText": ["prev item", "next item"],
-//    "slideBy":2,
-  //  "swipeAngle": false,
-  //  "container": "#autoWidth",
     container: '.my-slider',
     items: 1,
     responsive: {
@@ -64,29 +61,41 @@ var slider = tns({
       },
       900: {
         items: 3
-        // navAsThumbnails: true
       }
     }
   });
   
   var centers = document.querySelectorAll('.tns-slide-active');
   for (var i = 0; i < centers.length; i++) {
-      console.log(centers[i]);
       centers[i].classList.remove('center');
+      centers[i].classList.remove('right');
       if (centers[i].previousElementSibling.classList.contains('tns-slide-active') && centers[i].nextElementSibling.classList.contains('tns-slide-active')  ) {
           centers[i].classList.add('center');
       } else {
           centers[i].classList.remove('center');
       }
+      if (centers[i].previousElementSibling.classList.contains('center')) {
+         centers[i].classList.add('right');
+      } else {
+          centers[i].classList.remove('right');
+      }
   }
   var customizedFunction = function () {
     var centers = document.querySelectorAll('.tns-slide-active');
     for (var i = 0; i < centers.length; i++) {
-        console.log(centers[i]);
-        if (centers[i].previousElementSibling.classList.contains('tns-slide-active') && centers[i].nextElementSibling.classList.contains('tns-slide-active')  ) {
-            centers[i].classList.add('center');
-        } else {
-            centers[i].classList.remove('center');
+        //console.log(centers[i].nextElementSibling);
+        centers[i].classList.remove('right');
+        if (centers[i].nextElementSibling !==null) {
+            if (centers[i].previousElementSibling.classList.contains('tns-slide-active') && centers[i].nextElementSibling.classList.contains('tns-slide-active')  ) {
+                centers[i].classList.add('center');
+            } else {
+                centers[i].classList.remove('center');
+            }
+            if (centers[i].previousElementSibling.classList.contains('center')) {
+                centers[i].classList.add('right');
+            } else {
+                centers[i].classList.remove('right');
+            }
         }
     }
   }

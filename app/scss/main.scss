@@ -118,6 +118,8 @@ ul,li {
 	cursor: pointer;
 	background: transparent;
 	border: none;
+	min-width: 213px;
+    text-align: center;
 	&:before {
 		content: "";
 		position: absolute;
